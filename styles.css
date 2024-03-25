@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+body{
+    background-color:antiquewhite;
+    font-family: "Ubuntu", sans-serif;
+}
+*{
+    padding:0;
+    margin:0;
+}
+h2 {
+    font-weight: 800;
+    font-size: 1.8em;
+}
+nav{
+    background-color:black;
+    height:60px;
+
+}
+nav ul{
+    height:100%;
+    list-style-type:none;
+    color:white;
+    display:flex;
+    align-items:center;
+
+}
+nav ul li{
+    padding:0 11px;
+}
+.logo img{
+    width:45px;
+    padding:8px;
+}
+.logo{
+    font-weight:bolder;
+    display:flex;
+    align-items:center;
+}
+.container{
+    min-height:68vh;
+    font-family: "Merriweather", serif;
+    background-color: black;
+    color:white;
+    border-radius:15px;
+    width:70%;
+    padding:15px 0 0 15px;
+    display:flex;
+    margin:8px auto;
+    background-image: url(bg.jpg);
+    background-size:cover;
+    background-position:center;
+}
+.bottom{
+    position:absolute;
+    bottom:0;
+    /* margin-bottom: -15px; */
+    background-color: black;
+    height:80px;
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:white;
+
+}
+.bottom #playBar {
+    width: 87%;
+    height: 3px;
+    margin-bottom: 0.1rem;
+    cursor: pointer;
+}
+.icons {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+    cursor: pointer;
+}
+.icons :first-child {
+    font-size: 1.6em;
+}
+.icons :last-child {
+    font-size: 1.6em;
+}
+
+.icons i{
+    padding:0 5px;
+}
+.songItem img {
+    height: 37px;
+    width: 37px;
+    border-radius: 50%;
+}
+.songItem {
+    height: 40px;
+    background-color: white;
+    border-radius: 30px;
+    padding: 3px 5px;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 13px 0;
+}
+.songItem .duration{
+    margin:0 5px;
+}
+.duration i{
+    cursor: pointer;
+    padding-left: 0.4em;
+}
+.songsItemContainer {
+    margin-top: 1.4em;
+}
+.songInfo{
+    position: absolute;
+    left:6.5vw;
+    margin: 4vh 0 0 0;
+    font-size: 0.9em;
+    font-family: "Merriweather", serif;
+    display: flex;
+    align-items: center;
+
+}
+.songInfo img{
+    opacity:0;
+    transition: opacity 0.4s ease-in;
+    width:40px;
+}
+
+@media screen and (max-width:600px) {
+    .container{
+        width: 92%;
+        padding: 11px 15px;
+        margin: 3px 0;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-53%);
+        border-radius: 0;
+    }
+    .songItem {
+        height: 43px;
+    }
+    span.playButton{
+        min-width: 5em;
+    }
+    span.songName{
+        padding-left: 1em;
+    }
+    .duration i{
+        padding-left: 0.4em;
+    }
+    .bottom{
+        gap: 1.2em;
+
+    }
+    .songInfo{
+        font-size: 0.7em !important;
+        margin-bottom: 5.3em;
+    }
+    .songInfo img{
+        margin-bottom: -3em;
+    }
+}
+
+ @media screen and ((min-width:601px) and (max-width:780px)) {
+    .container {
+        width: 92%;
+        position: absolute;
+        top: 50%;
+        border-radius: 15px;
+        transform: translate(3%, -53%);
+        border-radius: 15px;
+    }
+    .songItem {
+        height: 50px;
+    }
+    span.playButton{
+        min-width: 5em;
+    }
+    span.songName{
+        padding-left: 1em;
+    }
+    .duration i{
+        padding-left: 0.4em;
+    }
+    .bottom{
+        gap: 1.2em;
+
+    }
+    .songInfo{
+        font-size: 0.8em !important;
+        margin-bottom: 3.9em;
+    }
+    .songInfo img{
+        margin-bottom: -3em;
+    }
+} 
+
+@media screen and (max-width:300px) {
+    .container {
+        width: 89%;
+        /* padding: 25px 15px; */
+        /* position: absolute; */
+        height: 60vh;
+        /* top: 50%; */
+        transform: translateY(-54%);
+        /* border-radius: 0; */
+    }
+    .songItem{
+        height: 60px;
+    }
+    h2 {
+        font-size: 1.2em;
+    }
+    span.songName {
+        font-size: 0.9em;
+    }
+    .songInfo{
+        font-size: 0.7em !important;
+        margin-bottom: 4.2em;
+    }
+}
